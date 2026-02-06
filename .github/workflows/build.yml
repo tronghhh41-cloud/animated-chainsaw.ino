@@ -13,7 +13,7 @@ jobs:
           libraries: |
             - TinyGPSPlus
             - ESP32Servo
-            - "Electronic Cats MPU6050"
-            - "Adafruit BMP280 Library"
+            - Electronic Cats MPU6050
+            - Adafruit BMP280 Library
             - HMC5883L
             
