@@ -8,11 +8,12 @@ jobs:
       - uses: arduino/compile-sketches@v1
         with:
           fqbn: esp32:esp32:esp32s3
-          sketch-path: "."
+          sketch-paths: |
+            ./
           libraries: |
-            "TinyGPSPlus"
-            "ESP32Servo"
-            "Electronic Cats MPU6050"
-            "Adafruit BMP280 Library"
-            "HMC5883L"
+            - TinyGPSPlus
+            - ESP32Servo
+            - "Electronic Cats MPU6050"
+            - "Adafruit BMP280 Library"
+            - HMC5883L
             
