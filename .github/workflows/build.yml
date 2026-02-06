@@ -9,10 +9,5 @@ jobs:
         with:
           fqbn: esp32:esp32:esp32s3
           sketch-paths: ./
-          libraries: |
-            TinyGPSPlus
-            ESP32Servo
-            Electronic Cats MPU6050
-            Adafruit BMP280 Library
-            HMC5883L
-            
+          libraries: TinyGPSPlus, ESP32Servo, Electronic Cats MPU6050, Adafruit BMP280 Library, HMC5883L
+          
