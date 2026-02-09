@@ -1,8 +1,7 @@
-name: Build ESP32 BIN
+name: Build ESP32-S3 BIN
 
 on:
   push:
-    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -23,18 +22,16 @@ jobs:
 
     - name: Install libraries
       run: |
-        arduino-cli lib install "MPU6050"
-        arduino-cli lib install "Adafruit Unified Sensor"
-        arduino-cli lib install "Adafruit HMC5883 Unified"
-        arduino-cli lib install "Adafruit BMP280 Library"
         arduino-cli lib install "TinyGPSPlus"
-        arduino-cli lib install "Adafruit NeoPixel"
         arduino-cli lib install "ESP32Servo"
+        arduino-cli lib install "Electronic Cats MPU6050"
+        arduino-cli lib install "Adafruit BMP280 Library"
+        arduino-cli lib install "DFRobot HMC5883L"
 
-    - name: Compile
+    - name: Compile sketch
       run: |
         arduino-cli compile \
-          --fqbn esp32:esp32:esp32 \
+          --fqbn esp32:esp32:esp32s3 \
           --output-dir build \
           Done.ino
 
